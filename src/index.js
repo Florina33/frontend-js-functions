@@ -43,7 +43,7 @@ console.log('res', res);	// res = x = 228
 
 
 
-/////////////////////
+/************** function MinNumber **************/
 
 // export function MinNumbers(arr) {  <-- выдает ошибку
 function MinNumber(arr) {
@@ -66,7 +66,7 @@ let minNum = MinNumber([44, 3, -12, '888', 5, -100]);
 console.log('\nMinNumber: ', minNum);
 
 
-/////////////////////
+/************** function MaxNumber **************/
 
 
 function MaxNumber(arr) {
@@ -90,7 +90,7 @@ let maxNum = MaxNumber([44, 3, -12, '888', 5, -100]);
 console.log('MaxNumber: ', maxNum);
 
 
-/////////////////////
+/************** function SumNumbers **************/
 
 
 // function SumNumbers() {
@@ -119,5 +119,7 @@ console.log('SumNumbers: ', sumNum);
 
 /////////////////////
 
+
+// c этой конструкцие дебагер (F5) не остановиться, можно бесконечно продолжать сессию дебагинга
 setInterval(function () {}, 10);
 
