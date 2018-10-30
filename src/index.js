@@ -16,7 +16,7 @@ export function mim () {
 
 
 // export function MinNumbers(arr) {  <-- выдает ошибку
-function MinNumbers(arr) {
+function MinNumber(arr) {
 	if(!arr){
 		console.log('Аргумент не передан');
 		return;
@@ -32,14 +32,14 @@ function MinNumbers(arr) {
 	return min;
 }
 
-let minNum = MinNumbers([44, 3, -12, '888', 5, -100]);
-console.log('MinNumbers: ', minNum);
+let minNum = MinNumber([44, 3, -12, '888', 5, -100]);
+console.log('MinNumber: ', minNum);
 
 
 /////////////////////
 
 
-function MaxNumbers(arr) {
+function MaxNumber(arr) {
 	if(!arr){
 		console.log('Аргумент не передан');
 		return;
@@ -56,8 +56,8 @@ function MaxNumbers(arr) {
 }
 
 // let maxNum = MaxNumbers(); // Аргумент не передан
-let maxNum = MaxNumbers([44, 3, -12, '888', 5, -100]);
-console.log('MaxNumbers: ', maxNum);
+let maxNum = MaxNumber([44, 3, -12, '888', 5, -100]);
+console.log('MaxNumber: ', maxNum);
 
 
 /////////////////////
