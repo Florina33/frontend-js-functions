@@ -15,6 +15,36 @@ export function mim () {
 */
 
 
+/******* TASK 1 *******/
+
+/*
+Подсчитать в уме результат вывода на экран промемуточных значений переменной res.
+*/
+
+var x = 6;
+var y = 15;
+var z = 4;
+var res;
+
+res = x+=y-x++*z;			// 6+=15-24  // постфиксный инкримент x++ выполниться после * но потом x перезапишется в конце
+console.log('res', res);	// res = x = -3
+
+res = z=--x-y*5;
+console.log('res', res);	// res = z = -79  -->  x = -4
+
+res = y/=x+5%z; 			// 5%-79 = 5  -->  15 /= -4 + 5  -->   15 /= 1
+console.log('res', res);	// res = 15
+
+res = z=x++ +y*5;			// постфиксный инкримент x++ выполниться после и перезапишет переменную x
+console.log('res', res);	// res = z = 71    x = -3
+
+res = x=y-x++*z;			// 15 - -213
+console.log('res', res);	// res = x = 228
+
+
+
+/////////////////////
+
 // export function MinNumbers(arr) {  <-- выдает ошибку
 function MinNumber(arr) {
 	if(!arr){
@@ -33,7 +63,7 @@ function MinNumber(arr) {
 }
 
 let minNum = MinNumber([44, 3, -12, '888', 5, -100]);
-console.log('MinNumber: ', minNum);
+console.log('\nMinNumber: ', minNum);
 
 
 /////////////////////
