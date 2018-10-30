@@ -1,0 +1,57 @@
+exports.id = 0;
+exports.modules = {
+
+/***/ "./src/index.js":
+/***/ (function(module, exports) {
+
+console.log(1);
+
+console.log('start');
+
+let global = 1;
+
+// задекларировали ф-ию
+function average() {
+	// среднее
+	let local = 2;
+	global = 10; // переназначим  эту переменную
+	console.log(global, local);
+
+	function sum() {
+		let result = 0;
+	}
+}
+
+average(); // эти скобки отвечают за вызов ф-ии
+// тут local не видена
+console.log(global);
+console.log(global, local);
+
+сщ;
+
+/*
+var numberA = 45;
+// let numberA = 45;
+let numberB = 65;
+const numberC = 85;
+
+numberA = 35;
+console.log(numberA);
+
+numberA = 55;
+console.log(numberA);
+
+numberC = 75; // тут будет ошибка - констану нельзя переназначать
+*/
+
+// после ошибки уже ничего не выводиться
+console.log('finish');
+
+// c этой штукой дебагер не остановиться F5
+// можем бесконечно проболжать сессию дебагинга
+setInterval(function () {}, 10);
+
+/***/ })
+
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6L1dPUksvU2lnbWEvUHJvamVjdHNfU2lnbWEvZnJvbnRlbmQtanMtZnVuY3Rpb25zL3NyY1xcaW5kZXguanMiXSwibmFtZXMiOlsiY29uc29sZSIsImxvZyIsImdsb2JhbCIsImF2ZXJhZ2UiLCJsb2NhbCIsInN1bSIsInJlc3VsdCIsItGB0YkiLCJzZXRJbnRlcnZhbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUFBLFFBQVFDLEdBQVIsQ0FBWSxDQUFaOztBQUVBRCxRQUFRQyxHQUFSLENBQVksT0FBWjs7QUFFQSxJQUFJQyxTQUFTLENBQWI7O0FBRUE7QUFDQSxTQUFTQyxPQUFULEdBQW9CO0FBQUU7QUFDckIsS0FBSUMsUUFBUSxDQUFaO0FBQ0FGLFVBQVMsRUFBVCxDQUZtQixDQUVOO0FBQ2JGLFNBQVFDLEdBQVIsQ0FBWUMsTUFBWixFQUFvQkUsS0FBcEI7O0FBRUEsVUFBU0MsR0FBVCxHQUFnQjtBQUNmLE1BQUlDLFNBQVMsQ0FBYjtBQUNBO0FBQ0Q7O0FBRURILFUsQ0FBWTtBQUNaO0FBQ0FILFFBQVFDLEdBQVIsQ0FBWUMsTUFBWjtBQUNBRixRQUFRQyxHQUFSLENBQVlDLE1BQVosRUFBb0JFLEtBQXBCOztBQUVBRzs7QUFHQTs7Ozs7Ozs7Ozs7Ozs7O0FBaUJBO0FBQ0FQLFFBQVFDLEdBQVIsQ0FBWSxRQUFaOztBQUVBO0FBQ0E7QUFDQU8sWUFBWSxZQUFZLENBQUUsQ0FBMUIsRUFBNEIsRUFBNUIsRSIsImZpbGUiOiIwLjFhNjZjY2Y4ODlkOGY5MzIwMjBiLmhvdC11cGRhdGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zb2xlLmxvZygxKTtcblxuY29uc29sZS5sb2coJ3N0YXJ0Jyk7XG5cbmxldCBnbG9iYWwgPSAxO1xuXG4vLyDQt9Cw0LTQtdC60LvQsNGA0LjRgNC+0LLQsNC70Lgg0YQt0LjRjlxuZnVuY3Rpb24gYXZlcmFnZSAoKSB7IC8vINGB0YDQtdC00L3QtdC1XG5cdGxldCBsb2NhbCA9IDI7XG5cdGdsb2JhbCA9IDEwOyAvLyDQv9C10YDQtdC90LDQt9C90LDRh9C40LwgINGN0YLRgyDQv9C10YDQtdC80LXQvdC90YPRjlxuXHRjb25zb2xlLmxvZyhnbG9iYWwsIGxvY2FsKTtcblxuXHRmdW5jdGlvbiBzdW0gKCkge1xuXHRcdGxldCByZXN1bHQgPSAwO1xuXHR9XG59XG5cbmF2ZXJhZ2UgKCk7IC8vINGN0YLQuCDRgdC60L7QsdC60Lgg0L7RgtCy0LXRh9Cw0Y7RgiDQt9CwINCy0YvQt9C+0LIg0YQt0LjQuFxuLy8g0YLRg9GCIGxvY2FsINC90LUg0LLQuNC00LXQvdCwXG5jb25zb2xlLmxvZyhnbG9iYWwpO1xuY29uc29sZS5sb2coZ2xvYmFsLCBsb2NhbCk7XG5cbtGB0YlcblxuXG4vKlxudmFyIG51bWJlckEgPSA0NTtcbi8vIGxldCBudW1iZXJBID0gNDU7XG5sZXQgbnVtYmVyQiA9IDY1O1xuY29uc3QgbnVtYmVyQyA9IDg1O1xuXG5udW1iZXJBID0gMzU7XG5jb25zb2xlLmxvZyhudW1iZXJBKTtcblxubnVtYmVyQSA9IDU1O1xuY29uc29sZS5sb2cobnVtYmVyQSk7XG5cbm51bWJlckMgPSA3NTsgLy8g0YLRg9GCINCx0YPQtNC10YIg0L7RiNC40LHQutCwIC0g0LrQvtC90YHRgtCw0L3RgyDQvdC10LvRjNC30Y8g0L/QtdGA0LXQvdCw0LfQvdCw0YfQsNGC0YxcbiovXG5cblxuXG4vLyDQv9C+0YHQu9C1INC+0YjQuNCx0LrQuCDRg9C20LUg0L3QuNGH0LXQs9C+INC90LUg0LLRi9Cy0L7QtNC40YLRjNGB0Y9cbmNvbnNvbGUubG9nKCdmaW5pc2gnKTtcblxuLy8gYyDRjdGC0L7QuSDRiNGC0YPQutC+0Lkg0LTQtdCx0LDQs9C10YAg0L3QtSDQvtGB0YLQsNC90L7QstC40YLRjNGB0Y8gRjVcbi8vINC80L7QttC10Lwg0LHQtdGB0LrQvtC90LXRh9C90L4g0L/RgNC+0LHQvtC70LbQsNGC0Ywg0YHQtdGB0YHQuNGOINC00LXQsdCw0LPQuNC90LPQsFxuc2V0SW50ZXJ2YWwoZnVuY3Rpb24gKCkge30sIDEwKTtcblxuXG4vLyBXRUJQQUNLIEZPT1RFUiAvL1xuLy8gLi9zcmMvaW5kZXguanMiXSwic291cmNlUm9vdCI6IiJ9

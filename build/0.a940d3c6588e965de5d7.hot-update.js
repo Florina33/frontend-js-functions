@@ -1,0 +1,30 @@
+exports.id = 0;
+exports.modules = {
+
+/***/ "./src/index.js":
+/***/ (function(module, exports) {
+
+console.log(1);
+
+co;
+
+var numberA = 45;
+let numberB = 65;
+const numberC = 85;
+
+numberA = 35;
+console.log(numberA);
+
+numberA = 55;
+console.log(numberA);
+
+numberC = 75;
+
+// c этой штукой дебагер не остановиться F5
+// можем бесконечно проболжать сессию дебагинга
+setInterval(function () {}, 10);
+
+/***/ })
+
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkQ6L1dPUksvU2lnbWEvUHJvamVjdHNfU2lnbWEvZnJvbnRlbmQtanMtZnVuY3Rpb25zL3NyY1xcaW5kZXguanMiXSwibmFtZXMiOlsiY29uc29sZSIsImxvZyIsImNvIiwibnVtYmVyQSIsIm51bWJlckIiLCJudW1iZXJDIiwic2V0SW50ZXJ2YWwiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBQSxRQUFRQyxHQUFSLENBQVksQ0FBWjs7QUFFQUM7O0FBRUEsSUFBSUMsVUFBVSxFQUFkO0FBQ0EsSUFBSUMsVUFBVSxFQUFkO0FBQ0EsTUFBTUMsVUFBVSxFQUFoQjs7QUFFQUYsVUFBVSxFQUFWO0FBQ0FILFFBQVFDLEdBQVIsQ0FBWUUsT0FBWjs7QUFFQUEsVUFBVSxFQUFWO0FBQ0FILFFBQVFDLEdBQVIsQ0FBWUUsT0FBWjs7QUFFQUUsVUFBVSxFQUFWOztBQUVBO0FBQ0E7QUFDQUMsWUFBWSxZQUFZLENBQUUsQ0FBMUIsRUFBNEIsRUFBNUIsRSIsImZpbGUiOiIwLmE5NDBkM2M2NTg4ZTk2NWRlNWQ3LmhvdC11cGRhdGUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJjb25zb2xlLmxvZygxKTtcblxuY29cblxudmFyIG51bWJlckEgPSA0NTtcbmxldCBudW1iZXJCID0gNjU7XG5jb25zdCBudW1iZXJDID0gODU7XG5cbm51bWJlckEgPSAzNTtcbmNvbnNvbGUubG9nKG51bWJlckEpO1xuXG5udW1iZXJBID0gNTU7XG5jb25zb2xlLmxvZyhudW1iZXJBKTtcblxubnVtYmVyQyA9IDc1O1xuXG4vLyBjINGN0YLQvtC5INGI0YLRg9C60L7QuSDQtNC10LHQsNCz0LXRgCDQvdC1INC+0YHRgtCw0L3QvtCy0LjRgtGM0YHRjyBGNVxuLy8g0LzQvtC20LXQvCDQsdC10YHQutC+0L3QtdGH0L3QviDQv9GA0L7QsdC+0LvQttCw0YLRjCDRgdC10YHRgdC40Y4g0LTQtdCx0LDQs9C40L3Qs9CwXG5zZXRJbnRlcnZhbChmdW5jdGlvbiAoKSB7fSwgMTApO1xuXG5cbi8vIFdFQlBBQ0sgRk9PVEVSIC8vXG4vLyAuL3NyYy9pbmRleC5qcyJdLCJzb3VyY2VSb290IjoiIn0=
