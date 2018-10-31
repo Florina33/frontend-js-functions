@@ -1,7 +1,7 @@
 
 /******* TASK 1 *******/
 
-/*
+
 var x = 6;
 var y = 15;
 var z = 4;
@@ -21,58 +21,71 @@ console.log('res', res);	// 71
 
 res = x=y-x++*z;			
 console.log('res', res);	// 228
-*/
+
 
 /************** function MinNumber **************/
 
-function min(arr) {
+function isNumber(arr){
+	let arrNum = [];
+	if(arr){
+		arrNum = arr.filter(item => typeof item == 'number')
+	}
+	return arrNum;
+}
+
+/***/
+
+export function min(arr) {
 	if(!arr){
-		console.log('Аргумент не передан');
+		return;
+	}
+	var arrNum = isNumber(arr);
+	if(!arrNum.length){
 		return;
 	}
 
+	var min = arrNum[0];
 	var i;
-	var min = arr[0];
-
-	for(i=1; i < arr.length; i++) {
-		if( (typeof arr[i] == 'number') && (arr[i] < min) )
-		min = arr[i];
+	for(i=0; i < arrNum.length; i++) {
+		if(arrNum[i] < min)
+		min = arrNum[i];
 	}
 	return min;
 }
 
-// let minNum = MinNumber([44, 3, -12, '888', 5, -100]);
-// console.log('\nMinNumber: ', minNum);
-
-
 /************** function MaxNumber **************/
 
-
-function max(arr) {
+export function max(arr) {
 	if(!arr){
-		console.log('Аргумент не передан');
+		return;
+	}
+	var arrNum = isNumber(arr);
+	if(!arrNum.length){
 		return;
 	}
 
 	var i;
-	var max = arr[0];
+	var max = arrNum[0];
 
-	for(i=1; i < arr.length; i++) {
-		if( (typeof arr[i] == 'number') && (arr[i] > max) )
-			max = arr[i];
+	for(i=0; i < arrNum.length; i++) {
+		if(arrNum[i] > max)
+			max = arrNum[i];
 	}
 	return max;
 }
 
-
 /************** function SumNumbers **************/
 
-function sum(...args) {
+export function sum(...args) {
+	if(!arguments){
+		return;
+	}
+
 	var i; 
 	var sum = 0;
 
 	for(i=0; i<arguments.length; i++) {
-		if(typeof arguments[i] == 'number')
+		if(typeof arguments[i] == "number")
 		{
 			sum += arguments[i];
 		}
@@ -80,11 +93,9 @@ function sum(...args) {
 	return sum;
 }
 
-// let sumNum = SumNumbers(33, 77, -15, 'dfs', 5, '15', [66,77], `57`);
-// console.log('SumNumbers: ', sumNum);
+// export { min, max, sum };
 
-export { min, max, sum };
-
-// export { MinNumber, MaxNumber, SumNumbers };
 // setInterval(function () {}, 10);
+
+
 
