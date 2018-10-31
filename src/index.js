@@ -1,7 +1,6 @@
 
 /******* TASK 1 *******/
 
-
 var x = 6;
 var y = 15;
 var z = 4;
@@ -25,11 +24,14 @@ console.log('res', res);	// 228
 
 /************** function MinNumber **************/
 
-function isNumber(arr){
-	let arrNum = [];
-	if(arr){
-		arrNum = arr.filter(item => typeof item == 'number')
+function isNumber(args) {
+	let arr = [];
+
+	for (let i = 0; i < args.length; i++) {
+		arr[i] = args[i];
 	}
+	let arrNum = arr.filter(item => typeof item == 'number');
+
 	return arrNum;
 }
 
@@ -43,13 +45,17 @@ export function min(arr) {
 	if(!arrNum.length){
 		return;
 	}
-
+	
+	/*
 	var min = arrNum[0];
 	var i;
 	for(i=0; i < arrNum.length; i++) {
 		if(arrNum[i] < min)
 		min = arrNum[i];
-	}
+	}*/
+	// or
+	var min = arrNum.reduce((min, current) => (min < current ? min : current));
+
 	return min;
 }
 
@@ -64,13 +70,16 @@ export function max(arr) {
 		return;
 	}
 
-	var i;
+	/*
 	var max = arrNum[0];
-
+	var i;
 	for(i=0; i < arrNum.length; i++) {
 		if(arrNum[i] > max)
 			max = arrNum[i];
-	}
+	}*/
+	// or
+	var max = arrNum.reduce((max, current) => (max > current ? max : current));
+
 	return max;
 }
 
@@ -78,23 +87,29 @@ export function max(arr) {
 
 export function sum(...args) {
 	if(!arguments){
-		return;
+		return 0;
 	}
 
+	let arrNum = isNumber(arguments);	
+	if(!arrNum.length){
+		return 0;
+	}
+
+	let sum = 0;
+
+	/*
 	var i; 
-	var sum = 0;
+	for(i=0; i<arrNum.length; i++) {
+		if(typeof arrNum[i] == "number")
+			sum += arrNum[i];
+	}*/
+	// or
+	sum = arrNum.reduce((sumItems, current) => sumItems + current);
 
-	for(i=0; i<arguments.length; i++) {
-		if(typeof arguments[i] == "number")
-		{
-			sum += arguments[i];
-		}
-	}
 	return sum;
 }
 
 // export { min, max, sum };
-
 // setInterval(function () {}, 10);
 
 
