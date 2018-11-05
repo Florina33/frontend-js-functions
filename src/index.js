@@ -1,63 +1,53 @@
-/** ************ function MinNumber **************/
-
-function isNumber (args) {
-	let arr = [];
-
-	for (let i = 0; i < args.length; i++) {
-		arr[i] = args[i];
-	}
-	let arrNum = arr.filter(item => typeof item === 'number');
-
-	return arrNum;
+function isNumber (value) {
+	return typeof value === 'number';
 }
 
-export function min (arr) {
-	if (!arr) {
-		return;
-	}
-	let arrNum = isNumber(arr);
-
-	if (!arrNum.length) {
-		return;
-	}
-
-	let minItem = arrNum.reduce((minCurrent, current) => (minCurrent < current ? minCurrent : current));
-
-	return minItem;
+function getLess (previousValue, currentValue) {
+	return previousValue < currentValue ? previousValue : currentValue;
 }
 
-/** ************ function MaxNumber **************/
-
-export function max (arr) {
-	if (!arr) {
-		return;
-	}
-	let arrNum = isNumber(arr);
-
-	if (!arrNum.length) {
-		return;
-	}
-
-	let maxItem = arrNum.reduce((maxCurrent, current) => (maxCurrent > current ? maxCurrent : current));
-
-	return maxItem;
+function getGreater (previousValue, currentValue) {
+	return previousValue > currentValue ? previousValue : currentValue;
 }
 
-/** ************ function SumNumbers **************/
-
-export function sum () {
-	if (!arguments) {
-		return 0;
-	}
-	let arrNum = isNumber(arguments);
-
-	if (!arrNum.length) {
-		return 0;
-	}
-
-	let Sum = 0;
-
-	Sum = arrNum.reduce((sumItems, current) => sumItems + current);
-
-	return Sum;
+function getSum (previousValue, currentValue) {
+	return previousValue + currentValue;
 }
+
+/*********/
+
+function min (arrNumbers = []) {
+	if (!arrNumbers) {return undefined;}
+
+	return arrNumbers
+		.filter(isNumber)
+		.reduce(getLess, undefined);
+}
+
+function max (arrNumbers = []) {
+	if (!arrNumbers) {return undefined;}
+
+	return arrNumbers
+		.filter(isNumber)
+		.reduce(getGreater, undefined);
+}
+
+function sum (...arrNumbers) {
+	if (!arrNumbers) {return 0;}
+
+	return arrNumbers.filter(isNumber)
+		.reduce(getSum, 0);
+}
+// console.log( sum([88, 22, -15]) ); // gives the result: 0
+
+// The correct result when using array arrNumbers[0]
+/*
+function sum (...arrNumbers) {
+	if (!arrNumbers[0]) {return 0;}
+
+	return arrNumbers[0].filter(isNumber)
+		.reduce(getSum, 0);
+}
+*/
+
+export { min, max, sum };
